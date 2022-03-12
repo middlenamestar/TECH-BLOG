@@ -1,0 +1,9 @@
+<h5>ALL MY POSTS</h5>
+<a class="btn btn-outline-info" href="/my-dash/new" role="button">new post</a>
+<div>
+    {{#each post as |post|}}
+    <h5>post title: {{title}}</h5>
+    <h5>post body: {{body}}</h5>
+    <h5>date created: {{createdAt}}</h5>
+    {{/each}}
+</div>
