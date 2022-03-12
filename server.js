@@ -16,10 +16,9 @@ const PORT = process.env.PORT || 3001;
 // sets up session and connect to our sequelize db.
 const sess = {
     secret: 'super meow secret',
-    // express session will use cookies by default, but we can specify options for those cookies by adding a cookies property to our session options.
     cookie: {
-      // maxAge sets the maximum age for the session to be active. listed in milliseconds.
-      maxAge: 86400,
+      // TIMEOUT. listed in milliseconds. 1 day.
+      maxAge: 86400000,
       // httpOnly tells express-session to only store session cookies when the protocol being used to connect to the server is HTTP.
       // httpOnly: true,
       // secure tells express-session to only initialize session cookies when the protocol being used is HTTPS. having this set to true, and running a server without encryption will result in the cookies not showing up in your developer console.
