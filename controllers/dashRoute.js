@@ -16,20 +16,21 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
-// ROUTE for NEW POST. localhost:3001/my-dashboard/new
+// GET ROUTE for NEW POST FORM. localhost:3001/my-dash/new
 router.get('/new', withAuth, (req, res) => {
     const loggedIn = req.session.loggedIn;
     res.render('new-post', {loggedIn});
 });
 
-// edit post. localhost:3001/my-dashboard/edit/2
+// edit post. localhost:3001/my-dash/edit/2
 router.get('/edit/:id', withAuth, async (req, res) => {
     try {
         id = req.params.id;
         const posts = await Post.findOne({where: {id}});
         const post = posts.get({plain: true});
+        console.log(post);
         const loggedIn = req.session.loggedIn;
-        res.render('edit', {post, loggedIn})
+        res.render('edit-post', {post, loggedIn})
     } catch (err) {
         res.redirect('/');
     }
