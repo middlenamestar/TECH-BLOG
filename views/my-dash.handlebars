@@ -1,9 +1,21 @@
-<h5>ALL MY POSTS</h5>
-<a class="btn btn-outline-info" href="/my-dash/new" role="button">new post</a>
-<div>
-    {{#each post as |post|}}
-    <h5>post title: {{title}}</h5>
-    <h5>post body: {{body}}</h5>
-    <h5>date created: {{createdAt}}</h5>
-    {{/each}}
+<div class="row justify-content-center">
+    <h2 class="my-3" style="font-family: 'Lora', serif; font-style: italic;">dashboard – all my posts</h2>
 </div>
+
+<div class="row justify-content-center">
+    <a class="btn btn-link" href="/my-dash/new" role="button">+ new post +</a>
+</div>
+
+{{#each post as |post|}}
+    <div class="row justify-content-center">
+        <div class="col-7">
+            <div class="card border-dark my-4">
+                <div class="card-body">
+                    <a class="card-title" href="/my-dash/edit/{{id}}">{{title}}</a>
+                    <p class="card-text">{{body}}</p>
+                    <p class="card-text">{{format_date createdAt}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/each}}

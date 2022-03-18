@@ -1,9 +1,41 @@
-<div>
-    <h5>here is the post title again {{post.title}}</h5>
-    <h5>here is the post body/CONTENT. {{post.body}}</h5>
-    <h5>here is the username {{post.user.username}}</h5>
-    <h5>date created: {{post.createdAt}}</h5>
+<div class="container">
+    <div class="row">
+        <div class="col my-4">
+            <p style="font-size: larger;">{{post.title}}</p>
+            <p>{{post.body}}</p>
+            <p>by {{post.user.username}}</p>
+            <p>{{format_date post.createdAt}}</p>
+        </div>
+    </div>
+
+{{#if post.comments}}
+    <div class="row justify-content-center my-2">
+        <p style="font-family: 'Lora', serif; font-style: italic;">comments for the road:</p>
+    </div>
+    {{#each post.comments}}
+    <div style="font-size: smaller;" class="row justify-content-center">
+        <div class="col-7 my-2">
+            <p class="text-muted">{{user.username}}:</p>
+            <p>{{body}}</p>
+            <p>[{{format_date createdAt}}]</p>
+        </div>
+    </div>
+    {{/each}}
+{{/if}}
+
+{{#if loggedIn}}
+    <div class="row justify-content-center my-4">
+        <div class="col-5">
+            <form id="comment-form">
+                <input type="hidden" id="post-id" value="{{post.id}}"/>
+                <label for="comment" style="font-family: 'Lora', serif; font-style: italic;">leave a comment:</label>
+                <textarea id="comment" class="form-control" rows="5"></textarea>
+                <button type="submit" class="btn btn-link">post</button>
+            </form>
+        </div>
+    </div>
+{{/if}}
+
 </div>
-<div>
-    <h5>comment box</h5>
-</div>
+
+<script src="/js/comment.js"></script>

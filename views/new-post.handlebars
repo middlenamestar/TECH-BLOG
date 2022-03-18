@@ -1,1 +1,22 @@
-<h5>NEW POST FORM.</h5>
+<div class="container">
+    <div class="row my-3">
+        <h4 style="font-family: 'Lora', serif; font-style: italic;">create new post</h4>
+    </div>
+
+    <div class="row">
+        <div class="col-8">
+            <form id="new-post-form">
+                <div class="form-group">
+                    <input type="text" id="title" class="form-control" placeholder="title">
+                </div>
+                <div class="form-group">
+                    <textarea id="content" class="form-control" placeholder="your text here" rows="9"></textarea>
+                </div>
+                <button type="submit" class="btn btn-link mx-1">post</button>
+                <a style="font-size: smaller;" href="/my-dash" class="mx-1 text-muted">back</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/js/new-post.js"></script>
