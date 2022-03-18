@@ -1,0 +1,49 @@
+body{
+    font-family: 'Public Sans', sans-serif;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+/* .card{
+    border: none;
+} */
+
+.card-title{
+    font-size: larger;
+}
+
+/* .card-text{
+    font-style: italic;
+} */
+
+#home-header{
+    font-family: 'Lora', serif;
+    font-style: italic;
+}
+
+::selection{
+    background-color: rgb(255, 132, 249);
+}
+
+textarea{
+    resize: none;
+}
+
+.btn-link{
+    color: black;
+}
+
+.btn-link:hover{
+    color: black;
+}
+
+#instead{
+    color: gold;
+}
