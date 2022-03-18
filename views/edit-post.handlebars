@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row my-3">
+        <h5 style="font-family: 'Lora', serif; font-style: italic;">editor's room</h5>
+    </div>
+
+    <div class="row">
+        <div class="col-8">
+            <form id="edit-post">
+                <input type="hidden" id="post-id" value="{{post.id}}"/>
+                <div class="form-group">
+                    <input type="text" id="title" class="form-control" value="{{post.title}}" placeholder="title">
+                </div>
+                <div class="form-group">
+                    <textarea id="content" class="form-control" placeholder="your text here" rows="11">{{post.body}}</textarea>
+                </div>
+                <button type="submit" class="btn btn-link">save</button>
+                <button id="delete-btn" class="btn btn-link">delete</button>
+                <a style="font-size: smaller;" href="/my-dash" class="mx-2 text-muted">nevermind</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/js/edit.js"></script>
