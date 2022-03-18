@@ -35,11 +35,6 @@ router.get('/post/:id', async (req, res) => {
     }
 });
 
-// U must log in first! localhost:3001/you-must-login-firrst. Locked page!
-router.get('/you-must-login-firrst', (req, res) => {
-    res.render('locked');
-});
-
 // login page w/ form. localhost:3001/login
 router.get('/login', (req, res) => {
     // if (req.session.loggedIn) {
@@ -58,11 +53,6 @@ router.get('/signup', (req, res) => {
     // }
     const loggedIn = req.session.loggedIn;
     res.render('signup', {loggedIn});
-});
-
-// NO USER FOUND 🚫
-router.get('/no-user', (req, res) => {
-    res.render('400-nouser');
 });
 
 module.exports = router;
