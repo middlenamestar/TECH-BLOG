@@ -27,7 +27,7 @@ router.get('/post/:id', async (req, res) => {
             ]
         });
         const post = posts.get({plain: true});
-        // console.log(post);
+        // console.log(post.comments);
         const loggedIn = req.session.loggedIn;
         res.render('individual-post', {post, loggedIn})
     } catch (err) {
