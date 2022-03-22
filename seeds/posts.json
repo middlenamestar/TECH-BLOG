@@ -1,7 +1,17 @@
 [
     {
         "title": "rilke",
-        "body": "here is a collection of words I've gathered over the years by rilke: ",
+        "body": "here is a collection of words I've gathered over the years by rilke: \"I am very concerned when I imagine how strangled and cut off you currently live, afraid of touching anything that is filled with memories (and what is not filled with memories?). You will freeze in place if you remain this way. You must not, dear. You have to move.\" \"When I go toward you it is with my whole life.\" \"Believe in a love that is being stored up for you like an inheritance, and have faith that in this love there is a strength and a blessing so large that you can travel as far as you wish without having to step outside it.\"",
         "user_id": 1
+    },
+    {
+        "title": "star's poem",
+        "body": "it''s pouring, the trees are getting greener before my eyes, i love you. i''m almost afraid of the intensity of this happiness.",
+        "user_id": 2
+    },
+    {
+        "title": "untitled",
+        "body": "feeling blue",
+        "user_id": 2
     }
 ]
